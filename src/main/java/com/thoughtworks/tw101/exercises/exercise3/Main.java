@@ -11,5 +11,6 @@ public class Main {
         Integer sum = oddSum.of(1, 100);
 
         System.out.println(sum);
+
     }
 }
