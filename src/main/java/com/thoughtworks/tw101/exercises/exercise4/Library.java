@@ -12,5 +12,20 @@ public class Library {
     }
 
     public void printBooksContaining(String partialBookTitle) {
+
+        printStream.print("\nBooks containing \'" + partialBookTitle + "\'\n");
+
+        int startIndex;
+        for(int i=0;i<books.length;i++){
+            startIndex= books[i].indexOf(partialBookTitle);
+
+            if (startIndex !=-1){
+                printStream.print(books[i]+"\n");
+        }
+
+
+        }
+
+
     }
 }
