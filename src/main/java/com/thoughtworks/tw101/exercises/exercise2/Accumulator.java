@@ -8,10 +8,10 @@ public class Accumulator {
     }
 
     public void increment() {
-        this.count++;
+        count++;
     }
 
     public void total(){
-        System.out.print(this.count);
+        System.out.print(count);
     }
 }
