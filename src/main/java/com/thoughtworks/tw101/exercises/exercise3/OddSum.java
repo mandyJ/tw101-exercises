@@ -5,7 +5,6 @@ public class OddSum {
     public int of(int start, int end) {
 
         int sum = 0;
-
         if(start!=end){
             if(start>end){
                 int temp=end;
