@@ -4,14 +4,14 @@ public class Accumulator {
     private int count;
 
     public Accumulator(){
-        count=0;
+        this.count=0;
     }
 
     public void increment() {
-        count++;
+        this.count++;
     }
 
     public void total(){
-        System.out.print(count);
+        System.out.print(this.count);
     }
 }
