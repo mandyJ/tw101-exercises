@@ -8,5 +8,11 @@ public class Main {
 
     public static void main(String[] args) {
 
+        RandomGen randomGen = new RandomGen(1,100);
+        int randomNum = randomGen.getRandomNum();
+        //System.out.print(randomNum);
+
+        PromptUser prompt = new PromptUser();
+        prompt.askUserAndGetResponse("Guess from 1 to 100:");
     }
 }
