@@ -13,7 +13,6 @@ public class PromptUser {
 
         Scanner in = new Scanner(System.in);
         int response = in.nextInt();
-        System.out.println("You entered : " + response);
 
         return response;
 

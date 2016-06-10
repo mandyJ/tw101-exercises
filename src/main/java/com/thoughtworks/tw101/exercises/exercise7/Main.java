@@ -8,11 +8,22 @@ public class Main {
 
     public static void main(String[] args) {
 
-        RandomGen randomGen = new RandomGen(1,100);
+        int min=1;
+        int max=100;
+
+        RandomGen randomGen = new RandomGen(min,max);
         int randomNum = randomGen.getRandomNum();
-        //System.out.print(randomNum);
+        //System.out.print("Random number is: " + randomNum);
 
         PromptUser prompt = new PromptUser();
-        prompt.askUserAndGetResponse("Guess from 1 to 100:");
+        int response;
+        EvaluateGuess evaluateGuess = new EvaluateGuess(randomNum);
+        boolean guessRight;
+
+        do {
+            response = prompt.askUserAndGetResponse("Guess from " + min + " to " + max + ": ");
+            guessRight = evaluateGuess.evaluate(response);
+            System.out.print(guessRight);
+        }while(!guessRight);
     }
 }
