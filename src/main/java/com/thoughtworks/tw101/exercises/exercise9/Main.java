@@ -14,8 +14,10 @@ public class Main {
         root.add("Bill");
         root.add("Jagruti");
         root.add("Tess");
+        //root.add("Xenia");
         root.add("Sue-Ellen");
         root.add("Sara");
+        //root.add("Ava");
         root.add("Casey");
 
         List<String> names = root.names();
@@ -24,4 +26,7 @@ public class Main {
             System.out.println(name);
         }
     }
+
+
+
 }
