@@ -9,12 +9,21 @@ public class PromptUser {
 
     public static int askUserAndGetResponse(String query){
 
-        System.out.print("\n" + query);
+        int response=0;
+        boolean validInput;
 
-        Scanner in = new Scanner(System.in);
-        String input = in.next();
-
-        int response = Integer.parseInt(input);
+        do{
+            System.out.print("\n" + query);
+            Scanner in = new Scanner(System.in);
+            String input = in.next();
+            try{
+                response = Integer.parseInt(input);
+                validInput=true;
+            }catch(NumberFormatException e) {
+                System.out.print("Please enter an integer.\n");
+                validInput = false;
+            }
+        }while(!validInput);
 
         return response;
 

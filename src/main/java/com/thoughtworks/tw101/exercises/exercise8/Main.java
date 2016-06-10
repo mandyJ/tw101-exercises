@@ -1,8 +1,10 @@
 package com.thoughtworks.tw101.exercises.exercise8;
 
-// Write a program that chooses a random number between 1 and 100. Then asks the user to enter a guess. If they guess
-// right then tell them they win, otherwise tell them if they guessed too high or low. Keep asking the user to guess
-// until they get the right answer. Use classes to separate the different concerns of this program.
+//Create a new version of Exercise #7 where you also record all of the user’s guesses and print them out once they
+// guess correctly. Use an ArrayList to store the guesses. Catch the NumberFormatException and handle the case where
+// the user entered a String that is not parseable.
+
+import java.util.ArrayList;
 
 public class Main {
 
@@ -10,6 +12,7 @@ public class Main {
 
         int min=1;
         int max=100;
+        ArrayList pastAnswers = new ArrayList();
 
         RandomGen randomGen = new RandomGen(min,max);
         int randomNum = randomGen.getRandomNum();
@@ -22,12 +25,15 @@ public class Main {
 
         do {
             response = prompt.askUserAndGetResponse("Guess from " + min + " to " + max + ": ");
+            pastAnswers.add(response);
             guessRight = evaluateGuess.evaluate(response);
 
-            if(guessRight)
-                System.out.print("You win!");
-            else
+            if(guessRight) {
+                System.out.print("You win!\n");
+                System.out.print("Your guesses: " + pastAnswers);
+            }else {
                 evaluateGuess.getHint();
+            }
         }while(!guessRight);
 
 
