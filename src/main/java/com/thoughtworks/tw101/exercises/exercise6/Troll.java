@@ -5,9 +5,9 @@ package com.thoughtworks.tw101.exercises.exercise6;
  */
 public class Troll implements Monster {
 
-    private final String name = "Troll";
+    private static String name = "Troll";
     private float hitPoints = 40;
-    private final double damageRatio = 0.5;
+    private static double damageRatio = 0.5;
 
 
     public void takeDamage(int amount){

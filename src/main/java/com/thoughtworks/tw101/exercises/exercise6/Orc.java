@@ -5,9 +5,9 @@ package com.thoughtworks.tw101.exercises.exercise6;
  */
 public class Orc implements Monster {
 
-    private final String name = "Orc";
+    private static String name = "Orc";
     private float hitPoints = 20;
-    private final double damageRatio = 1;
+    private static double damageRatio = 1;
 
 
     public void takeDamage(int amount){
