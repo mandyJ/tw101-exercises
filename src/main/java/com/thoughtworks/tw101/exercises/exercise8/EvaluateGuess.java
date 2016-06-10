@@ -1,4 +1,4 @@
-package com.thoughtworks.tw101.exercises.exercise7;
+package com.thoughtworks.tw101.exercises.exercise8;
 
 /**
  * Created by Mandy on 2016-06-09.

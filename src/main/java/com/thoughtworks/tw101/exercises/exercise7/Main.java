@@ -23,7 +23,13 @@ public class Main {
         do {
             response = prompt.askUserAndGetResponse("Guess from " + min + " to " + max + ": ");
             guessRight = evaluateGuess.evaluate(response);
-            System.out.print(guessRight);
+
+            if(guessRight)
+                System.out.print("You win!");
+            else
+                evaluateGuess.getHint();
         }while(!guessRight);
+
+
     }
 }
